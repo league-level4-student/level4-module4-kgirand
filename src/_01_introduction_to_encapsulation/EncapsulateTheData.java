@@ -19,15 +19,53 @@ package _01_introduction_to_encapsulation;
 public class EncapsulateTheData {
 	//1. Encapsulate the member variables.
 	//   Add restrictions to the setters according to the comment.
-	
 	//2. Create a new JUnit Test case and write tests to verify that 
 	//   the member variables' getters and setters are working
 	
-	int itemsReceived; //must not be negative. All negative arguments get set to 0.
-	float degreesTurned; //must be locked between 0.0 and 360.0 inclusive.
-	String nomenclature = " "; //must not be set to a blank string. Blank Strings get set to a space
-	Object memberObj;  //must not be a String.  If it is a String, set it equal to a new Object();
-	
+	private int itemsReceived; //must not be negative. All negative arguments get set to 0.
+	public int getItemsReceived() {
+		return itemsReceived;
+	}
+	public void setItemsReceived(int x) {
+		if(x>0) {
+			this.itemsReceived = x;
+		}else {
+			this.itemsReceived = 0;
+		}
+	}
+	private float degreesTurned; //must be locked between 0.0 and 360.0 inclusive.
+		public float getDegreesTurned() {
+			return degreesTurned;
+		}
+		public void setDegreesTurned(float degree) {
+			if(degree > 0.0) {
+				if(degree < 360.0) {
+					this.degreesTurned = degree;
+				}else {
+					this.degreesTurned = 360;
+				}
+			}else {
+				this.degreesTurned = 0;
+			}
+		}
+	private String nomenclature = " "; //must not be set to a blank string. Blank Strings get set to a space
+		public String getNomenClature() {
+			return nomenclature;
+		}
+		public void setNomenClature(String s) {
+			if(s != "") {
+				this.nomenclature = s;
+			}else {
+				this.nomenclature = " ";
+			}
+		}
+	private Object memberObj;  //must not be a String.  If it is a String, set it equal to a new Object();
+		public Object getMemberObj() {
+			return memberObj;
+		}
+		public void setMemberObj() {
+			
+		}
 	public static void main(String[] args) {
 		
 	}
