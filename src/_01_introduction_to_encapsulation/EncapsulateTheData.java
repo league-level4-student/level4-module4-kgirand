@@ -63,10 +63,15 @@ public class EncapsulateTheData {
 		public Object getMemberObj() {
 			return memberObj;
 		}
-		public void setMemberObj() {
-			
+		public void setMemberObj(Object o) {
+			if(o instanceof String) {
+				o = new Object();
+			}else {
+				memberObj = o;
+			}
 		}
 	public static void main(String[] args) {
 		
 	}
+	
 }
