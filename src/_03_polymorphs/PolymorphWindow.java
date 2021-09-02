@@ -23,6 +23,8 @@ public class PolymorphWindow extends JPanel implements ActionListener{
    	 new PolymorphWindow().buildWindow();
     }
     
+    RedMorph red = new RedMorph();
+    
     public void buildWindow(){
    	 window = new JFrame("IT'S MORPHIN' TIME!");
    	 window.add(this);

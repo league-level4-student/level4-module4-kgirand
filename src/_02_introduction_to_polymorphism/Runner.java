@@ -34,7 +34,7 @@ public class Runner {
 		//animal is an Animal reference pointing to an Animal object 
 		Animal animal = new Animal();
 		animal.speak(); //prints "I am an animal"
-		
+		//
 		//animal can also point to a Dog object since Dog extends Animal
 		animal = new Dog(); 
 		animal.speak(); //prints "Woof!"
