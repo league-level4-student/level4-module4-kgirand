@@ -3,8 +3,8 @@ package _03_polymorphs;
 import java.awt.Graphics;
 
 public abstract class Polymorph extends RedMorph{
-    private int x;
-    private int y;
+    protected int x;
+    protected int y;
     private int width = 50;
     private int height = 50;
     
@@ -46,7 +46,9 @@ public abstract class Polymorph extends RedMorph{
     
     
     public void update(){
-   	 
+    	MovingMorph mm = new MovingMorph();
+    
+    	
     }
     
     public abstract void draw(Graphics g);
