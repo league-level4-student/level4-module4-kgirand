@@ -1,5 +1,19 @@
 package _03_polymorphs;
 
-public class MovingMorph {
+import java.awt.Graphics;
+import java.util.Random;
+
+public class MovingMorph extends Polymorph{
+
+	MovingMorph(int x, int y) {
+		super(x, y);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

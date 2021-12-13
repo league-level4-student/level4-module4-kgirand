@@ -38,9 +38,10 @@ public class HospitalTest extends TestCase {
 	/* Fix asserts one at a time */
 	public void testDoctorsHaveSpecialties() throws Exception {
 		Doctor testDoctor = new Doctor();
+		testDoctor.makesHouseCalls();
 		assertEquals(false, testDoctor.performsSurgery());
 
-		Doctor testSurgeon = new Surgeon();
+		Surgeon testSurgeon = new Surgeon();
 		assertEquals(true, testSurgeon.performsSurgery());
 
 		GeneralPractitioner testGP = new GeneralPractitioner();
@@ -51,7 +52,7 @@ public class HospitalTest extends TestCase {
 
 	/* A doctor has a list of patients */
 	public void testAssignDoctor() throws Exception {
-		Doctor testDoctor = new GeneralPractitioner();
+		Doctor testDoctor = new Doctor();
 		testDoctor.assignPatient(new Patient());
 		assertEquals(1, testDoctor.getPatients().size());
 		testDoctor.assignPatient(new Patient());
@@ -65,6 +66,7 @@ public class HospitalTest extends TestCase {
 		Patient testPatient = new Patient();
 		assertEquals(false, testPatient.feelsCaredFor());
 		testPatient.checkPulse();
+		testPatient.feelsCaredFor();
 		assertEquals(true, testPatient.feelsCaredFor());
 	}
 

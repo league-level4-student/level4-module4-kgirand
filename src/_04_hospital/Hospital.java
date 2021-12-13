@@ -6,9 +6,10 @@ import java.util.List;
 public class Hospital {
 	List<Doctor> doctors = new ArrayList();
 	List<Patient> patients = new ArrayList();
-	public void addDoctor(GeneralPractitioner generalPractitioner) {
+	public void addDoctor(Doctor generalPractitioner) {
 		// TODO Auto-generated method stub
 		doctors.add(generalPractitioner);
+		
 	}
 
 	public List<Doctor> getDoctors() {
