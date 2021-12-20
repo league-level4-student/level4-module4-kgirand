@@ -14,6 +14,7 @@ public class BluePolymorph extends Polymorph{
 		g.setColor(Color.blue);
 		g.fillRect(x, y, 50, 50);
 		
+		
 	}
 	
 }
